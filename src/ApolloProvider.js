@@ -8,7 +8,7 @@ import {ApolloClient,
 
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:5000'
+  uri: 'https://salty-harbor-74299.herokuapp.com/'
 });
 
 const authLink = setContext(() => {
