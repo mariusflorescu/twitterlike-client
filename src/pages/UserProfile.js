@@ -26,6 +26,7 @@ function UserProfile(props) {
   const thisUser = data.getUserByUsername;
   let userMarkup;
   if(!thisUser){
+    if(errors);
     userMarkup = <p>Loading user profile...</p>
   } else {
         const {username,email,createdAt,biography} = thisUser;
@@ -46,10 +47,10 @@ function UserProfile(props) {
             </Card.Description>
           </Card.Content>
           <Card.Content extra>
-            <a>
+            
               <Icon name='mail' />
               {email}
-            </a>
+            
           </Card.Content>
         </Card>
         </Grid.Column>

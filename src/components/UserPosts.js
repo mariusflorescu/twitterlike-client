@@ -9,7 +9,7 @@ import moment from 'moment'
 function UserPosts({username}) {
   const [errors,setErrors] = useState({});
 
-  const {loading,data={}} = useQuery(FETCH_USERPOSTS_QUERY,{
+  const {data={}} = useQuery(FETCH_USERPOSTS_QUERY,{
     variables:{
       username
     },
@@ -21,7 +21,9 @@ function UserPosts({username}) {
   const thisUserPosts = data.getUserPosts;
   let postsMarkup;
   if(!thisUserPosts){
-    postsMarkup = (<p>Loading data....</p>);
+    if(errors){
+    postsMarkup = (<p>Loading data.... </p>);
+    }
   } else {
     postsMarkup = (
     <Card fluid>
@@ -39,7 +41,8 @@ function UserPosts({username}) {
         </Feed.Event>))}
         </Feed>
       </Card.Content>
-      </Card>);
+      </Card>
+      );
   }
 
   return postsMarkup;
