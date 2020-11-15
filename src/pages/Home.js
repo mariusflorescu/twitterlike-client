@@ -42,7 +42,7 @@ function Home() {
         <h1>Loading...</h1>
       ) : (<Transition.Group>
         {(posts && posts.map(post => (
-        <Grid.Column mobile={16} tablet={8} computer={4} key={post.id} style={{marginBottom: 20}}>
+        <Grid.Column mobile={16} tablet={8} computer={5} key={post.id} style={{marginBottom: 20}}>
           <PostCard post={post}/>
         </Grid.Column>
       )))}
