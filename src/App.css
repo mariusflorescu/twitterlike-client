@@ -1,38 +1,23 @@
-.App {
-  text-align: center;
+.form-container{
+  width:400px;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.createPost{
+  padding: 0.3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ededed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profileCont{
+  width:100%;
+  padding: 1rem 5rem;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items:center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.userPosts{
+  margin-top: 1rem;
 }
